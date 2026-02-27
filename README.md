@@ -1,5 +1,5 @@
 🚀 Project R
-Privacy-First AI Gateway for Secure Data & Prompt-Driven Model Generation
+Privacy-First AI Gateway for Secure Data & Prompt-Driven Model Building and Pickling
 
 Upload data. Protect sensitive information. Describe what you want to predict.
 Get a production-ready ML model — instantly.
