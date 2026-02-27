@@ -1,0 +1,16 @@
+age,monthly_spend,tenure_months,num_support_calls,contract_type,is_premium,churn
+22,500,3,5,monthly,0,1
+45,1200,24,1,yearly,1,0
+34,800,12,2,monthly,0,0
+50,1500,36,0,yearly,1,0
+29,400,2,6,monthly,0,1
+41,1100,18,1,yearly,1,0
+23,300,1,7,monthly,0,1
+38,950,15,3,monthly,1,0
+60,2000,48,0,yearly,1,0
+27,450,4,4,monthly,0,1
+33,700,10,2,monthly,0,0
+52,1700,40,1,yearly,1,0
+26,350,3,6,monthly,0,1
+47,1300,30,0,yearly,1,0
+31,650,8,3,monthly,0,0

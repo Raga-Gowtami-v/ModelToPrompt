@@ -29,12 +29,25 @@ class ScanResponse(BaseModel):
 class PromptResponse(BaseModel):
     model_id: str
     task_type: str
+    detection_reason: str = ""
     target_column: str
     model_name: str = ""
+    selected_model: str = ""
+    selected_metric: str = ""
+    primary_score: float = 0.0
+    train_primary_score: Optional[float] = None
+    generalization_gap: Optional[float] = None
+    adjusted_score: Optional[float] = None
     metrics: Dict[str, Any] = {}
+    all_model_metrics: List[Dict[str, Any]] = []
+    feature_importance: Optional[List[Dict[str, Any]]] = None
     predictions: List[Dict[str, Any]] = []
+    train_rows: int = 0
+    test_rows: int = 0
+    evaluation_method: str = "80-20 Train-Test Split"
     dataset_summary: Dict[str, Any] = {}
     model_path: str
+    warning: Optional[str] = None
     message: str
 
 
@@ -63,14 +76,25 @@ class DatasetSummary(BaseModel):
     total_rows: int
     train_rows: int
     test_rows: int
+    cross_validation_used: bool = False
+    evaluation_method: str = "80-20 Train-Test Split"
     features: List[str]
 
 
 class AutoMLResponse(BaseModel):
     status: str
     model_summary: ModelSummary
-    evaluation_metrics: Dict[str, float]
+    detection_reason: str = ""
+    evaluation_metrics: Dict[str, Any]
+    all_model_metrics: List[Dict[str, Any]] = []
+    selected_metric: str = ""
+    primary_score: float = 0.0
+    feature_importance: Optional[List[Dict[str, Any]]] = None
+    train_rows: int = 0
+    test_rows: int = 0
+    evaluation_method: str = "80-20 Train-Test Split"
     predictions: List[Dict[str, Any]]
     dataset_summary: DatasetSummary
+    warning: Optional[str] = None
     download_url: str
     message: str
