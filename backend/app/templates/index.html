@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Data &amp; Automated ML Pipeline</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 700px;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 3rem;
+        }
+        .actions {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            width: 280px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 210, 255, 0.15);
+            border-color: rgba(0, 210, 255, 0.4);
+        }
+        .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #bbb;
+            line-height: 1.5;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1.2rem;
+            padding: 0.6rem 1.6rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-sanitize {
+            background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+            color: #fff;
+        }
+        .btn-sanitize:hover { background: linear-gradient(135deg, #3a7bd5, #00d2ff); }
+        .btn-train {
+            background: linear-gradient(135deg, #f857a6, #ff5858);
+            color: #fff;
+        }
+        .btn-train:hover { background: linear-gradient(135deg, #ff5858, #f857a6); }
+        footer {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #555;
+        }
+        footer a { color: #3a7bd5; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Data &amp; Automated ML Pipeline</h1>
+        <p class="subtitle">Privacy-first PII detection and prompt-driven ML model training</p>
+
+        <div class="actions">
+            <a class="card" href="/docs#/default/sanitize_sanitize_post" id="sanitize-card">
+                <div class="card-icon">&#128274;</div>
+                <h2>Sanitize Dataset</h2>
+                <p>Upload a document, CSV, or image to detect and mask personally identifiable information.</p>
+                <span class="btn btn-sanitize">Sanitize Now</span>
+            </a>
+
+            <a class="card" href="/docs#/default/automated_ml_automated_ml_post" id="train-card">
+                <div class="card-icon">&#129302;</div>
+                <h2>Train Model from Dataset</h2>
+                <p>Upload a sanitized CSV with a prompt to automatically train and evaluate an ML model.</p>
+                <span class="btn btn-train">Train Model</span>
+            </a>
+        </div>
+
+        <footer>
+            <p>API Docs: <a href="/docs">/docs</a> &middot; <a href="/redoc">/redoc</a></p>
+        </footer>
+    </div>
+</body>
+</html>
